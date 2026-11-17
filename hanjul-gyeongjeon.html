@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한 줄 경전 | 지금 바로 위로가 되는 34문장</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--bg:#111110;--card:#1a1a18;--line:#2c2b27;--ink:#f1ede4;--sub:#a9a397;--dim:#6f6a60;--accent:#e2a65b;--odd:#8fb3ff;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+header{max-width:1280px;margin:0 auto;padding:64px 28px 24px}
+.eyebrow{color:var(--accent);font-size:13px;letter-spacing:.2em;font-weight:600}
+h1{font-size:clamp(30px,4.4vw,52px);font-weight:700;line-height:1.25;margin:14px 0 18px;letter-spacing:-.01em}
+.lead{color:var(--sub);max-width:760px;font-size:16px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--sub)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.filters{position:sticky;top:0;z-index:10;background:rgba(17,17,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.filters .in{max-width:1280px;margin:0 auto;padding:12px 28px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{border:1px solid var(--line);background:transparent;color:var(--sub);padding:6px 14px;border-radius:99px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+.toggle{margin-left:auto;font-size:13px;color:var(--sub);display:flex;gap:6px;align-items:center;cursor:pointer}
+main{max-width:1280px;margin:0 auto;padding:28px 28px 80px;display:flex;flex-direction:column;gap:28px}
+.card{display:grid;grid-template-columns:minmax(0,1.25fr) 250px 250px;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}
+.num{color:var(--dim);font-size:14px}
+.tag{display:inline-block;margin-left:8px;font-size:12px;color:var(--accent);border:1px solid rgba(226,166,91,.4);border-radius:99px;padding:1px 9px}
+.quote{letter-spacing:-.02em;font-size:clamp(22px,2.3vw,30px);font-weight:700;line-height:1.45;margin:14px 0 16px;word-break:keep-all}
+.src{font-size:13px;color:var(--accent);margin-bottom:10px}
+.sutra{line-height:1.75;font-size:15px;color:#d8d2c5;border-left:2px solid var(--line);padding-left:14px;word-break:keep-all}
+.why{margin-top:16px;font-size:14px;color:var(--sub);word-break:keep-all}
+.why b{color:var(--ink);font-weight:600}
+.note{margin-top:8px;font-size:12px;color:var(--dim)}
+.panel{display:flex;flex-direction:column;gap:10px}
+.plabel{font-size:12px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;gap:6px}
+.plabel.m{color:var(--accent)}.plabel.o{color:var(--odd)}
+.frame{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--line)}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:60px 16px 22px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-weight:700;font-size:17px;line-height:1.45;text-align:center;word-break:keep-all;text-shadow:0 1px 8px rgba(0,0,0,.6);transition:opacity .3s}
+.fr{position:absolute;opacity:0;pointer-events:none}
+.toggle .box{width:14px;height:14px;border:1px solid var(--sub);border-radius:3px;display:inline-block}
+.chip{user-select:none}
+.badge{position:absolute;top:10px;left:10px;font-size:11px;background:rgba(0,0,0,.55);padding:3px 8px;border-radius:99px;color:#fff}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:22px;text-align:center;background:radial-gradient(circle at 30% 20%,#25324d,#121722 70%);}
+.ph .big{font-size:13px;letter-spacing:.2em;color:var(--odd);font-weight:700}
+.ph .t{font-size:14px;color:#cdd8f0;word-break:keep-all}
+.desc{font-size:13px;color:var(--sub);word-break:keep-all}
+.odd .desc{color:#c3cde3}
+.credit{font-size:11px;color:var(--dim)}
+.credit a{color:var(--dim)}
+.search{font-size:12px;color:var(--odd);text-decoration:none}
+footer{max-width:1280px;margin:0 auto;padding:0 28px 80px;color:var(--dim);font-size:13px}
+footer h3{color:var(--sub);font-size:14px;margin-bottom:8px}
+footer li{margin-left:18px}
+@media (max-width:980px){.card{grid-template-columns:1fr 1fr}.card .text{grid-column:1/-1}}
+@media (max-width:560px){.card{grid-template-columns:1fr;padding:22px}.frame{max-width:300px}}
+.hide{display:none}
+
+#f1:checked ~ main .card:not(.th1){display:none}
+#f1:checked ~ .filters .c1{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f2:checked ~ main .card:not(.th2){display:none}
+#f2:checked ~ .filters .c2{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f3:checked ~ main .card:not(.th3){display:none}
+#f3:checked ~ .filters .c3{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f4:checked ~ main .card:not(.th4){display:none}
+#f4:checked ~ .filters .c4{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f5:checked ~ main .card:not(.th5){display:none}
+#f5:checked ~ .filters .c5{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f6:checked ~ main .card:not(.th6){display:none}
+#f6:checked ~ .filters .c6{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f7:checked ~ main .card:not(.th7){display:none}
+#f7:checked ~ .filters .c7{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f8:checked ~ main .card:not(.th8){display:none}
+#f8:checked ~ .filters .c8{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f9:checked ~ main .card:not(.th9){display:none}
+#f9:checked ~ .filters .c9{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f10:checked ~ main .card:not(.th10){display:none}
+#f10:checked ~ .filters .c10{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f11:checked ~ main .card:not(.th11){display:none}
+#f11:checked ~ .filters .c11{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f12:checked ~ main .card:not(.th12){display:none}
+#f12:checked ~ .filters .c12{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f13:checked ~ main .card:not(.th13){display:none}
+#f13:checked ~ .filters .c13{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+#f0:checked ~ .filters .c0{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:600}
+.ff:not(#f0):checked ~ main .sec{display:none}
+#capT:not(:checked) ~ main .cap{opacity:0}
+#capT:checked ~ .filters .toggle .box{background:var(--accent);border-color:var(--accent)}
+.sec{margin:26px 0 -6px}.sec .k{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.14em}.sec h2{font-size:clamp(22px,2.6vw,30px);font-weight:700;letter-spacing:-.02em;margin:6px 0 4px}.sec p{color:var(--sub);font-size:14px}
+.card.warm{background:linear-gradient(135deg,#221c14,#1a1a18 60%);border-color:#3a3024}
+.chip.c1,.chip.c2,.chip.c3{border-color:rgba(226,166,91,.45);color:var(--ink)}
+.sep{width:1px;height:20px;background:var(--line);margin:0 4px}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">법구경 · 숫타니파타 · 초기 경전</div>
+  <h1>한 줄 경전<br>지금 바로 위로가 되는 34문장</h1>
+  <p class="lead">2,500년 전 경전에서 지금 한국의 20~40대에게 바로 닿는 문장을 골랐어요. 1부는 "힘들었지?", "잘하고 있어", "잘될 거야"처럼 부처가 직접 말을 건네는 장면이고, 2부는 평가, 비교, 번아웃, 불안, 이별을 다독이는 문장이에요. 문장마다 결이 맞는 참고 영상과, 낯설지만 묘하게 어울리는 제작용 영상 아이디어를 나란히 붙였습니다.</p>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--accent)"></i>어울리는 화면: 무료 스톡 참고 영상 (자막 얹은 미리보기)</span>
+    <span><i class="dot" style="background:var(--odd)"></i>이질적 화면: 직접 제작할 콘셉트 (레퍼런스가 있으면 함께)</span>
+  </div>
+</header>
+<input type="radio" name="f" id="f0" class="fr ff" checked><input type="radio" name="f" id="f1" class="fr ff"><input type="radio" name="f" id="f2" class="fr ff"><input type="radio" name="f" id="f3" class="fr ff"><input type="radio" name="f" id="f4" class="fr ff"><input type="radio" name="f" id="f5" class="fr ff"><input type="radio" name="f" id="f6" class="fr ff"><input type="radio" name="f" id="f7" class="fr ff"><input type="radio" name="f" id="f8" class="fr ff"><input type="radio" name="f" id="f9" class="fr ff"><input type="radio" name="f" id="f10" class="fr ff"><input type="radio" name="f" id="f11" class="fr ff"><input type="radio" name="f" id="f12" class="fr ff"><input type="radio" name="f" id="f13" class="fr ff"><input type="checkbox" id="capT" class="fr" checked>
+<div class="filters"><div class="in"><label class="chip c0" for="f0">전체</label><label class="chip c1" for="f1">힘들었지?</label><label class="chip c2" for="f2">잘하고 있어</label><label class="chip c3" for="f3">잘될 거야</label><span class="sep"></span><label class="chip c4" for="f4">평가·악플</label><label class="chip c5" for="f5">비교·경쟁</label><label class="chip c6" for="f6">자책·번아웃</label><label class="chip c7" for="f7">불안·후회</label><label class="chip c8" for="f8">작은 성장</label><label class="chip c9" for="f9">자존감</label><label class="chip c10" for="f10">소소한 행복</label><label class="chip c11" for="f11">혼자·자립</label><label class="chip c12" for="f12">상실·이별</label><label class="chip c13" for="f13">관계·분노</label><label class="toggle" for="capT"><span class="box"></span>자막 미리보기</label></div></div>
+<main>
+<div class="sec"><div class="k">PART 1 · 12문장</div><h2>말 걸어주는 경전</h2><p>힘들었지? · 잘하고 있어 · 잘될 거야</p></div>
+<article class="card th1 warm">
+  <div class="text"><span class="num">1-01</span><span class="tag">힘들었지?</span>
+  <div class="quote">일어나지 않아도 돼. 좀 견딜 만해?</div>
+  <div class="src">상윳따 니까야 22:87 · 왁깔리 경</div>
+  <p class="sutra">병든 왁깔리가 부처를 보고 침상에서 일어나려 하자 부처가 말했다. &quot;괜찮다, 왁깔리여. 일어나지 마라. 여기 자리가 있으니 나는 거기 앉겠다.&quot; 그리고 물었다. &quot;견딜 만한가? 지낼 만한가? 아픔은 줄어들고 있는가, 더해지고 있는가?&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · &quot;힘들었지?&quot;에 가장 가까운 경전 장면. 부처가 먼저 찾아와 앉고, 일으켜 세우지 않고, 상태부터 묻는다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6130573/clinic-corona-coronavirus-covid-6130573.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6130573/6130573-sd_540_960_30fps.mp4"></video><div class="cap">일어나지 않아도 돼. 좀 견딜 만해?</div></div><div class="desc">병상 곁에 앉아 말을 거는 사람.</div><div class="credit">참고: <a href="https://www.pexels.com/video/woman-talking-the-patient-6130573/" target="_blank" rel="noopener">Woman Talking the Patient</a> · RDNE Stock project / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">심야 택시 뒷좌석. 기사님이 아무 말 없이 히터를 올리고 라디오 볼륨을 줄인다. 대화는 없고, 백미러 속 눈이 한 번 마주친다.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/taxi%20night%20back%20seat/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th1 warm">
+  <div class="text"><span class="num">1-02</span><span class="tag">힘들었지?</span>
+  <div class="quote">너희가 서로 돌보지 않으면, 누가 돌보겠느냐.</div>
+  <div class="src">율장 대품 8:26 · 아픈 비구 이야기</div>
+  <p class="sutra">설사병에 걸린 비구가 자기 오물 속에 누워 있었다. &quot;돌봐 주는 이가 없느냐?&quot; &quot;저는 아무에게도 도움이 되지 못해서, 아무도 돌봐 주지 않습니다.&quot; 부처는 &quot;아난다여, 물을 떠 오너라. 이 비구를 씻기자&quot; 하고 직접 물을 부었다. 그리고 말했다. &quot;너희가 서로 돌보지 않으면 누가 돌보겠느냐. 나를 돌보려는 이는 아픈 이를 돌보라.&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · &quot;나는 쓸모없는 사람&quot;이라고 느끼는 사람 곁에서 부처가 직접 물을 붓는다. 쓸모를 묻지 않고 씻겨 준다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/36827468/baklava-eid-eid-mubarek-gaziantep-36827468.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/36827468/15603311_540_960_25fps.mp4"></video><div class="cap">너희가 서로 돌보지 않으면, 누가 돌보겠느냐.</div></div><div class="desc">누군가의 손에 천천히 물을 부어 씻겨 주는 장면.</div><div class="credit">참고: <a href="https://www.pexels.com/video/traditional-handwashing-ritual-with-rose-water-36827468/" target="_blank" rel="noopener">Traditional Handwashing Ritual with Rose Water</a> · Beyza Emişen / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">새벽 편의점 앞, 쭈그려 앉은 사람 옆에 누군가 말없이 생수와 숙취해소제를 내려놓고 같이 앉는다. 얼굴은 안 나오고 손과 발만.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/convenience%20store%20night/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th1 warm">
+  <div class="text"><span class="num">1-03</span><span class="tag">힘들었지?</span>
+  <div class="quote">이제 편히 자. 다 내려놓았잖아.</div>
+  <div class="src">장로니게 1.1 · 이름 모를 비구니</div>
+  <p class="sutra">편히 자거라, 작은 비구니여. 손수 지은 옷을 덮고서. 그대의 욕망은 가라앉았다, 솥 안에서 바싹 졸아든 나물처럼.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 경전에 남은 가장 다정한 잠자리 인사. &quot;수고했어, 오늘은 푹 자&quot;에 그대로 닿는다.</p>
+  <p class="note">※ 카드 문장 뒷부분은 원문을 쉬운 말로 푼 카피예요.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/17041569/pexels-photo-17041569.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/17041569/17041569-sd_540_960_30fps.mp4"></video><div class="cap">이제 편히 자. 다 내려놓았잖아.</div></div><div class="desc">아침빛이 드는 하얀 이불.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-bed-with-a-white-comforter-and-pillows-17041569/" target="_blank" rel="noopener">A bed with a white comforter and pillows</a> · Erofili Charkoftaki / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">빨래방 건조기에서 막 꺼낸 뜨끈한 이불에 얼굴을 파묻는다. 건조기 문이 열리는 &quot;딸깍&quot; 소리와 숨 내쉬는 소리만.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/laundry%20dryer%20blanket/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th1 warm">
+  <div class="text"><span class="num">1-04</span><span class="tag">힘들었지?</span>
+  <div class="quote">잘 지내지? 서로 다정한 눈으로 보고 있지?</div>
+  <div class="src">맛지마 니까야 128 · 오염원 경</div>
+  <p class="sutra">&quot;견딜 만한가? 지낼 만한가?&quot; … &quot;그대들은 서로 화합하고, 서로 기뻐하고, 다투지 않고, 우유와 물처럼 어울려, 다정한 눈으로 서로를 바라보며 지내고 있는가?&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · 부처가 제자들을 찾아가 처음 건넨 말은 가르침이 아니라 안부였다. 단톡방에 그대로 보내도 되는 문장.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/3256852/free-video-3256852.jpg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/3256852/3256852-sd_540_960_25fps.mp4"></video><div class="cap">잘 지내지? 서로 다정한 눈으로 보고 있지?</div></div><div class="desc">여럿이 둘러앉아 함께 먹는 식탁.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-group-of-people-eating-together-in-a-table-3256852/" target="_blank" rel="noopener">A Group Of People Eating Together In A Table</a> · fauxels / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6535489/pexels-photo-6535489.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6535489/6535489-sd_506_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">블랙커피에 우유를 붓는 슬로모션. 둘이 섞이며 구름처럼 퍼진다. 그 위에 &quot;우유와 물처럼&quot; 자막.</div><div class="credit">참고: <a href="https://www.pexels.com/video/pouring-milk-into-black-coffee-glasses-6535489/" target="_blank" rel="noopener">Pouring Milk into Black Coffee Glasses</a> · ROMAN ODINTSOV / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/pouring%20milk%20into%20coffee/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th2 warm">
+  <div class="text"><span class="num">1-05</span><span class="tag">잘하고 있어</span>
+  <div class="quote">너는 오랫동안, 정말 잘해 왔다.</div>
+  <div class="src">디가 니까야 16 · 대반열반경</div>
+  <p class="sutra">&quot;그만, 아난다여. 슬퍼하지 마라, 울지 마라. … 아난다여, 그대는 오랫동안 사랑이 담긴 몸과 말과 마음으로 여래를 보살폈다. 이롭게, 기쁘게, 한결같이, 한없이. 그대는 많은 복을 지었다. 정진하라. 곧 번뇌에서 벗어날 것이다.&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · 부처가 세상을 떠나기 전, 오랫동안 곁에서 시중든 제자에게 한 말. &quot;잘해 왔다&quot;와 &quot;잘될 것이다&quot;가 한 문단에 다 들어 있다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/8164796/adult-aging-process-alone-anxiety-8164796.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/8164796/8164796-sd_540_960_30fps.mp4"></video><div class="cap">너는 오랫동안, 정말 잘해 왔다.</div></div><div class="desc">서로의 손을 맞잡은 두 사람.</div><div class="credit">참고: <a href="https://www.pexels.com/video/people-holding-hands-for-support-8164796/" target="_blank" rel="noopener">People Holding Hands for Support</a> · Kindel Media / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/40806781/pexels-photo-40806781.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/40806781/17435785_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">퇴사 마지막 날 밤, 불 꺼진 사무실에서 내 의자를 책상 안으로 밀어 넣는 손. 모니터에 붙은 포스트잇 한 장: &quot;그동안 고생 많았어.&quot;</div><div class="credit">참고: <a href="https://www.pexels.com/video/modern-office-space-at-night-with-warm-lighting-40806781/" target="_blank" rel="noopener">Modern Office Space at Night with Warm Lighting</a> · 정규송 Nui MALAMA / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/empty%20office%20night/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th2 warm">
+  <div class="text"><span class="num">1-06</span><span class="tag">잘하고 있어</span>
+  <div class="quote">멈추지도, 너무 애쓰지도 않고 건넜다.</div>
+  <div class="src">상윳따 니까야 1:1 · 폭류경</div>
+  <p class="sutra">&quot;그대는 어떻게 거센 물을 건넜습니까?&quot; &quot;벗이여, 나는 멈추지도 않고 애쓰지도 않고 건넜다. 멈추면 가라앉았고, 애쓰면 휩쓸렸다. 그래서 멈추지도 애쓰지도 않고 건넜다.&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · 번아웃 직전의 사람에게. 무리하지 않고 지금 속도로 계속 가고 있다면, 그걸로 잘하고 있는 거다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/33604777/pexels-photo-33604777.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/33604777/14284438_540_960_30fps.mp4"></video><div class="cap">멈추지도, 너무 애쓰지도 않고 건넜다.</div></div><div class="desc">바위 사이를 흘러가는 강물. 멈추지도 서두르지도 않는다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/serene-river-flow-amidst-rocky-terrain-33604777/" target="_blank" rel="noopener">Serene River Flow Amidst Rocky Terrain</a> · 정규송 Nui MALAMA / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/11136652/pexels-photo-11136652.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/11136652/11136652-sd_540_960_25fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">수영장 튜브 위에 누워 둥둥 떠 있는 사람을 드론으로 수직 탑뷰. 물살 따라 천천히 돈다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/drone-shot-of-woman-on-pool-float-11136652/" target="_blank" rel="noopener">Drone Shot of Woman on Pool Float</a> · TheFullFrameFox / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/pool%20float%20drone/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th2 warm">
+  <div class="text"><span class="num">1-07</span><span class="tag">잘하고 있어</span>
+  <div class="quote">할 수 있으니까, 하라고 하는 거야.</div>
+  <div class="src">앙굿따라 니까야 2:19</div>
+  <p class="sutra">&quot;해로운 것을 버려라. 해로운 것은 버릴 수 있다. 버릴 수 없는 것이라면 나는 버리라고 말하지 않았을 것이다. 버릴 수 있기에 버리라고 말하는 것이다.&quot; 이어서 이로운 것도 똑같이 말한다. 기를 수 있기에 기르라고 한다고.</p>
+  <p class="why"><b>왜 바로 닿나</b> · &quot;넌 할 수 있어&quot;의 경전 버전. 할 수 없는 일이었다면 처음부터 권하지 않았다는 논리라서 빈말로 들리지 않는다.</p>
+  <p class="note">※ 원래는 &quot;해로운 습관을 버리라&quot;는 맥락이고, 카드 문장은 그 논리만 가져왔어요.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/3196464/free-video-3196464.jpg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/3196464/3196464-hd_1920_1080_25fps.mp4"></video><div class="cap">할 수 있으니까, 하라고 하는 거야.</div></div><div class="desc">아기의 첫걸음을 잡아 주는 손.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-mother-teaching-her-baby-to-walk-3196464/" target="_blank" rel="noopener">A Mother Teaching Her Baby To Walk</a> · Pressmaster / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7701957/pexels-photo-7701957.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7701957/7701957-sd_506_960_25fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">엘리베이터 없는 빌라 5층 계단을 오르는 발. 층마다 숫자가 하나씩 뜬다. 마지막 계단에서 문이 열린다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-delivery-man-going-up-the-stair-while-carrying-a-thermal-bag-7701957/" target="_blank" rel="noopener">A Delivery Man Going Up the Stair while Carrying a Thermal Bag</a> · MART  PRODUCTION / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/climbing%20stairs/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th3 warm">
+  <div class="text"><span class="num">1-08</span><span class="tag">잘될 거야</span>
+  <div class="quote">좋은 일을 겁내지 마.</div>
+  <div class="src">이띠웃따까 22</div>
+  <p class="sutra">&quot;비구들이여, 좋은 일(복)을 두려워하지 마라. 그것은 행복의 다른 이름이다. 바라던 것, 사랑스러운 것, 마음에 드는 것의 다른 이름이다.&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · 좋은 일이 생겨도 &quot;이러다 뭐 터지는 거 아냐?&quot; 하고 불안해하는 사람에게.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/28780239/iphone-video-magnificent-landscape-mountain-crest-mountain-range-28780239.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/28780239/12476049_540_960_30fps.mp4"></video><div class="cap">좋은 일을 겁내지 마.</div></div><div class="desc">구름바다 위로 떠오르는 해.</div><div class="credit">참고: <a href="https://www.pexels.com/video/sunrise-over-sea-of-clouds-in-mountain-range-28780239/" target="_blank" rel="noopener">Sunrise Over Sea of Clouds in Mountain Range</a> · Riedelmax . / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6995100/black-black-guy-black-man-black-people-6995100.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6995100/6995100-sd_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">현관 앞 택배 상자. 뜯기 직전 1초 멈칫했다가, 웃으면서 테이프를 쭉 뜯는다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/woman-opening-packages-6995100/" target="_blank" rel="noopener">Woman Opening Packages</a> · Kindel Media / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/opening%20package/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th3 warm">
+  <div class="text"><span class="num">1-09</span><span class="tag">잘될 거야</span>
+  <div class="quote">두려워하지 마. 나쁘게 끝나지 않아.</div>
+  <div class="src">상윳따 니까야 55:21 · 22:87</div>
+  <p class="sutra">&quot;두려워하지 마라, 마하나마여, 두려워하지 마라. 그대의 끝은 나쁘지 않을 것이다. 오랫동안 믿음과 계율과 배움과 베풂과 지혜로 마음을 닦아 온 사람은…&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · &quot;잘될 거야&quot;에 가장 가까운 원문. 막연한 응원이 아니라 &quot;지금까지 쌓아 온 것이 있으니까&quot;라는 근거가 붙어 있다.</p>
+  <p class="note">※ 원래 죽음을 걱정하는 이에게 한 말이라, 카드에서는 &quot;끝&quot;을 넓은 뜻으로 풀었어요.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/19797397/pexels-photo-19797397.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/19797397/19797397-sd_540_960_30fps.mp4"></video><div class="cap">두려워하지 마. 나쁘게 끝나지 않아.</div></div><div class="desc">눈 내리는 밤길, 헤드라이트가 비추는 만큼만 달리는 차.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-car-driving-through-the-snow-at-night-19797397/" target="_blank" rel="noopener">A car driving through the snow at night</a> · Vietrov / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/36982633/pexels-photo-36982633.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/36982633/15667297_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">롤러코스터가 꼭대기에서 멈춘 1초, 탑승자 시점. 내려가기 직전 화면이 정지되고 자막.</div><div class="credit">참고: <a href="https://www.pexels.com/video/thrilling-roller-coaster-ride-on-sunny-day-36982633/" target="_blank" rel="noopener">Thrilling Roller Coaster Ride on Sunny Day</a> · Código Solem• / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/roller%20coaster%20pov/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th3 warm">
+  <div class="text"><span class="num">1-10</span><span class="tag">잘될 거야</span>
+  <div class="quote">부디, 행복하고 평안하기를.</div>
+  <div class="src">숫타니파타 1.8 · 자애경</div>
+  <p class="sutra">모든 존재가 행복하고 평안하기를. 모든 존재의 마음이 행복하기를.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 가장 짧고 직접적인 축원. 영상 마지막 인사나 고정 댓글로 쓰기 좋다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/39181586/pexels-photo-39181586.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/39181586/16672149_540_1024_120fps.mp4"></video><div class="cap">부디, 행복하고 평안하기를.</div></div><div class="desc">물 위로 떠가는 등불들.</div><div class="credit">참고: <a href="https://www.pexels.com/video/tranquil-night-lantern-festival-on-water-39181586/" target="_blank" rel="noopener">Tranquil Night Lantern Festival on Water</a> · Matheus Bertelli / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7362808/pexels-photo-7362808.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7362808/7362808-sd_540_960_24fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">택배 기사님을 위해 문 앞에 둔 생수 한 병과 포스트잇 &quot;늘 감사해요&quot;. 계단을 올라온 기사님이 그걸 발견하는 순간에서 끝.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-dolly-shot-of-packages-on-the-front-door-7362808/" target="_blank" rel="noopener">A Dolly Shot of Packages on the Front Door</a> · RDNE Stock project / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/package%20front%20door/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th3 warm">
+  <div class="text"><span class="num">1-11</span><span class="tag">잘될 거야</span>
+  <div class="quote">풀려났다, 정말 시원하게 풀려났다!</div>
+  <div class="src">장로니게 1.11 · 뭇따 비구니</div>
+  <p class="sutra">나는 풀려났다, 정말 잘 풀려났다! 나를 짓누르던 굽은 세 가지, 절구와 공이와 등 굽은 남편에게서. 태어남과 죽음에서 풀려났고, 존재로 끌고 가던 끈은 끊어졌다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 2,500년 전 여성이 남긴 해방 선언. 퇴사, 이별, 독립하는 날 그대로 쓸 수 있는 유머와 후련함.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/20683460/aesthetic-sky-blue-sky-flock-of-birds-flying-birds-20683460.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/20683460/20683460-sd_540_960_30fps.mp4"></video><div class="cap">풀려났다, 정말 시원하게 풀려났다!</div></div><div class="desc">파란 하늘로 흩어져 날아가는 새 떼.</div><div class="credit">참고: <a href="https://www.pexels.com/video/flock-of-birds-flying-in-the-blue-sky-20683460/" target="_blank" rel="noopener">flock of birds flying in the blue sky</a> · Çağrı KANMAZ / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">퇴근 현관에서 구두, 사원증, 넥타이를 하나씩 벗어 던지며 침대까지 가는 슬로모션. 마지막에 침대로 다이빙.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/taking%20off%20shoes%20home/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th3 warm">
+  <div class="text"><span class="num">1-12</span><span class="tag">잘될 거야</span>
+  <div class="quote">아, 행복하다! 아, 행복하다!</div>
+  <div class="src">우다나 2.10 · 밧디야 경</div>
+  <p class="sutra">&quot;예전에 왕이었을 때는 궁 안팎과 나라 안팎을 경비병이 지켰는데도 늘 두렵고 불안했다. 지금은 숲속 나무 아래 혼자 있어도 두렵지 않다. 편안하고 느긋하게, 들사슴 같은 마음으로 산다. 아, 행복하다! 아, 행복하다!&quot;</p>
+  <p class="why"><b>왜 바로 닿나</b> · 가진 걸 내려놓은 뒤에 오히려 편해진 사람의 실제 고백. &quot;잘될 거야&quot;를 먼저 겪어 본 사람의 말.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/10601494/blonde-girl-park-summer-teenager-10601494.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/10601494/10601494-sd_506_960_25fps.mp4"></video><div class="cap">아, 행복하다! 아, 행복하다!</div></div><div class="desc">공원 잔디에 누운 사람.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-teen-girl-lying-on-the-grass-in-a-park-10601494/" target="_blank" rel="noopener">A Teen Girl Lying on the Grass in a Park</a> · Ron Lach / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/35732922/camp-camp-gear-camp-life-camp-setup-35732922.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/35732922/15144793_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">한강 돗자리에 대자로 누운 사람을 드론으로 수직 상승하며 찍는다. 점점 작아지는데 표정은 점점 편해진다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/relaxing-under-the-trees-an-aerial-view-35732922/" target="_blank" rel="noopener">Relaxing Under the Trees: An Aerial View</a> · setengah lima sore / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/lying%20on%20grass%20aerial/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<div class="sec"><div class="k">PART 2 · 22문장</div><h2>마음을 다잡는 경전</h2><p>평가 · 비교 · 번아웃 · 불안 · 이별 · 혼자됨</p></div>
+<article class="card th4">
+  <div class="text"><span class="num">2-01</span><span class="tag">평가·악플</span>
+  <div class="quote">세상에 욕먹지 않는 사람은 없다.</div>
+  <div class="src">법구경 227–228 · 분노품</div>
+  <p class="sutra">침묵하는 이도 비난받고, 말 많은 이도 비난받고, 적당히 말하는 이도 비난받는다. 이 세상에 비난받지 않는 사람은 없다. 오로지 비난만 받거나 오로지 칭찬만 받는 사람은 예전에도 없었고, 앞으로도 없을 것이며, 지금도 없다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 2,500년 전에도 사람들은 서로를 평가했다. 악플, 인사평가, 단톡방 뒷말이 전부 내 탓만은 아니라는 확인.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/28087050/pexels-photo-28087050.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/28087050/12296499_540_960_30fps.mp4"></video><div class="cap">세상에 욕먹지 않는 사람은 없다.</div></div><div class="desc">비 오는 거리, 무채색 사람들 사이를 지나가는 빨간 우산 하나.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-red-umbrella-in-the-rain-28087050/" target="_blank" rel="noopener">A red umbrella in the rain</a> · Ferhattkr / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/38410501/blurred-background-close-up-phone-content-watching-creator-content-38410501.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/38410501/16310015_540_960_25fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">배달앱 리뷰창을 스크롤한다. 같은 가게에 별 1개 &quot;최악&quot;과 별 5개 &quot;인생 맛집&quot;이 번갈아 지나간다. 스크롤이 멈추면 경전 문장이 뜬다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/scrolling-through-social-media-on-smartphone-38410501/" target="_blank" rel="noopener">Scrolling Through Social Media on Smartphone</a> · Hamim Rony / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/phone%20review%20scrolling/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th4">
+  <div class="text"><span class="num">2-02</span><span class="tag">평가·악플</span>
+  <div class="quote">바위는 바람에 흔들리지 않는다.</div>
+  <div class="src">법구경 81 · 현명한 이 품</div>
+  <p class="sutra">단단한 바위가 폭풍에 흔들리지 않듯, 지혜로운 이는 칭찬에도 비난에도 흔들리지 않는다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 칭찬에 들뜨지도, 비난에 무너지지도 않아도 된다는 허락.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/30084348/4k-nature-4k-nature-video-4k-video-4k-video-nature-30084348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/30084348/12902921_540_960_30fps.mp4"></video><div class="cap">바위는 바람에 흔들리지 않는다.</div></div><div class="desc">바위에 부서지는 파도. 파도는 계속 바뀌고 바위는 그대로.</div><div class="credit">참고: <a href="https://www.pexels.com/video/waves-crashing-on-rocky-coastline-in-4k-30084348/" target="_blank" rel="noopener">Waves Crashing on Rocky Coastline in 4K</a> · Djimmer Koster / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/39743169/pexels-photo-39743169.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/39743169/16947447_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">가게 앞 바람인형이 정신없이 펄럭인다. 바로 옆의 빨간 소화전은 꿈쩍도 하지 않는다. 카메라는 끝까지 소화전만 보고 있다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/blue-inflatable-tube-man-in-urban-setting-39743169/" target="_blank" rel="noopener">Blue Inflatable Tube Man in Urban Setting</a> · Paul Bredt / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/inflatable%20tube%20man/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th5">
+  <div class="text"><span class="num">2-03</span><span class="tag">비교·경쟁</span>
+  <div class="quote">이기고 지는 것, 둘 다 내려놓으면 편안하다.</div>
+  <div class="src">법구경 201 · 안락품</div>
+  <p class="sutra">승리는 원한을 낳고, 진 사람은 괴로움 속에 눕는다. 이기고 지는 것을 모두 버린 평온한 이는 편안히 잠든다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 승진, 입시, 연애, 집값. 이겨도 불안하고 져도 괴로운 게임에서 잠깐 내려와도 된다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/39740462/pexels-photo-39740462.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/39740462/16945228_540_960_30fps.mp4"></video><div class="cap">이기고 지는 것, 둘 다 내려놓으면 편안하다.</div></div><div class="desc">경기가 끝난 빈 경기장. 아무도 없는 관중석에 해가 진다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/empty-stadium-seats-overlooking-football-field-39740462/" target="_blank" rel="noopener">Empty Stadium Seats Overlooking Football Field</a> · Evlow Photography / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/39270835/black-and-white-board-game-goban-39270835.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/39270835/16709899_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">대국이 끝난 바둑판. 손이 흑돌과 백돌을 한꺼번에 쓸어 통에 담는다. 차르르 하는 돌 소리만 크게 들린다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/strategic-go-board-game-in-black-and-white-39270835/" target="_blank" rel="noopener">Strategic Go Board Game in Black and White</a> · Audrey Bory / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/go%20board%20game%20stones/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th5">
+  <div class="text"><span class="num">2-04</span><span class="tag">비교·경쟁</span>
+  <div class="quote">작은 웅덩이의 물고기처럼, 우리는 서로 다투고 있었다.</div>
+  <div class="src">숫타니파타 4.15 · 무기를 든 자의 경</div>
+  <p class="sutra">작은 웅덩이 속 물고기처럼 서로 다투며 허우적대는 사람들을 보고, 내게 두려움이 일었다. … 그때 나는 보았다. 보기 어려운 화살 하나가 가슴에 박혀 있는 것을. 그 화살에 꿰여 사람들은 사방으로 내달린다. 그 화살을 뽑기만 하면 더는 내달리지도, 가라앉지도 않는다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 부처도 경쟁하는 세상을 보고 &quot;두려웠다&quot;고 했다. 불안한 건 내가 약해서가 아니다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/40718208/budapest-hungary-metro-subway-platform-40718208.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/40718208/17393822_540_960_30fps.mp4"></video><div class="cap">작은 웅덩이의 물고기처럼, 우리는 서로 다투고 있었다.</div></div><div class="desc">출근 시간 지하철 승강장. 사람들이 한 방향으로 밀려간다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/crowded-budapest-metro-station-platform-40718208/" target="_blank" rel="noopener">Crowded Budapest Metro Station Platform</a> · Kakha Mchedlidze / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">수산시장 고무대야 속 물고기를 광고처럼 찍는다. 슬로모션, 역광, 튀는 물방울. 다음 컷은 출근길 환승통로를 같은 앵글로.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/fish%20market/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th6">
+  <div class="text"><span class="num">2-05</span><span class="tag">자책·번아웃</span>
+  <div class="quote">두 번째 화살은 맞지 않아도 된다.</div>
+  <div class="src">상윳따 니까야 36:6 · 화살 경</div>
+  <p class="sutra">괴로운 느낌이 닥치면, 배우지 못한 사람은 슬퍼하고 한탄하고 가슴을 치며 어쩔 줄 모른다. 화살 한 대를 맞고 곧바로 또 한 대를 맞는 것과 같다. 그는 몸의 아픔과 마음의 아픔, 두 가지를 겪는다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 일이 틀어진 건 첫 번째 화살. &quot;나는 왜 이 모양일까&quot;는 내가 나에게 쏘는 두 번째 화살이다.</p>
+  <p class="note">※ 카드 문장은 경전의 요지를 풀어 쓴 카피예요.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6655894/archer-archery-addict-archery-for-children-archery-for-girls-6655894.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6655894/6655894-sd_540_960_30fps.mp4"></video><div class="cap">두 번째 화살은 맞지 않아도 된다.</div></div><div class="desc">과녁에 꽂히는 화살 한 대. 슬로모션으로 한 번만.</div><div class="credit">참고: <a href="https://www.pexels.com/video/arrow-hitting-target-6655894/" target="_blank" rel="noopener">Arrow Hitting Target</a> · RDNE Stock project / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7362704/business-comics-communication-computer-7362704.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7362704/7362704-sd_540_960_24fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">새벽 2시 메신저 입력창. 썼다 지웠다를 반복하는 화면 녹화. 끝내 아무것도 보내지 않고 화면이 꺼진다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/person-texting-a-message-7362704/" target="_blank" rel="noopener">Person Texting a Message</a> · RDNE Stock project / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/texting%20phone%20night/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th7">
+  <div class="text"><span class="num">2-06</span><span class="tag">불안·후회</span>
+  <div class="quote">지나간 건 이미 지나갔고, 올 건 아직 오지 않았다.</div>
+  <div class="src">맛지마 니까야 131 · 한밤의 현자 경(일야현자경)</div>
+  <p class="sutra">과거를 좇지 말고, 미래를 바라지 말라. 과거는 이미 지나갔고 미래는 아직 오지 않았다. 지금 여기 일어나는 것을 그 자리에서 또렷이 보라. 휩쓸리지 않고, 흔들리지 않게.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 후회와 걱정 사이에 끼인 사람에게 &quot;오늘&quot;이라는 칸 하나만 건네는 문장.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/20736942/afternoon-tea-cup-of-tea-hot-drink-orange-colour-20736942.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/20736942/20736942-sd_540_960_30fps.mp4"></video><div class="cap">지나간 건 이미 지나갔고, 올 건 아직 오지 않았다.</div></div><div class="desc">김이 오르는 커피 한 잔. 아무 일도 일어나지 않는 10초.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-coffee-cup-with-steam-coming-out-of-it-20736942/" target="_blank" rel="noopener">A coffee cup with steam coming out of it</a> · Emrah / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">편의점 전자레인지 창 안에서 삼각김밥이 돈다. 디지털 숫자가 0:30에서 0:00이 될 때까지 원테이크. &quot;띵&quot; 소리와 함께 자막.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/microwave%20countdown/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th7">
+  <div class="text"><span class="num">2-07</span><span class="tag">불안·후회</span>
+  <div class="quote">과거도, 미래도, 지금도 내려놓고 건너가라.</div>
+  <div class="src">법구경 348 · 애욕품</div>
+  <p class="sutra">과거를 놓아라. 미래를 놓아라. 현재도 놓아라. 그리고 존재의 저 언덕으로 건너가라. 마음이 온전히 풀려나면 다시는 태어남과 죽음으로 돌아오지 않으리라.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 다 붙잡고 있어서 무거운 것이다. &quot;놓아도 된다&quot;는 말이 필요한 날.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/19593043/pexels-photo-19593043.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/19593043/19593043-sd_540_960_30fps.mp4"></video><div class="cap">과거도, 미래도, 지금도 내려놓고 건너가라.</div></div><div class="desc">안개 낀 강 위의 배 한 척. 저편이 보이지 않아도 앞으로 간다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-man-standing-on-a-boat-in-the-fog-19593043/" target="_blank" rel="noopener">A man standing on a boat in the fog</a> · Green Asad / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">공항 수하물 컨베이어. 다들 떠난 뒤 주인 없는 캐리어 하나만 계속 돈다. 마지막에 캐리어가 고무 커튼 너머로 사라진다.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/airport%20baggage%20carousel/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th6">
+  <div class="text"><span class="num">2-08</span><span class="tag">자책·번아웃</span>
+  <div class="quote">늦었다고 생각한 사람도, 구름 걷힌 달처럼 빛난다.</div>
+  <div class="src">법구경 172–173 · 세상품</div>
+  <p class="sutra">전에는 게을렀어도 이제 게으르지 않은 이는, 구름에서 벗어난 달처럼 이 세상을 비춘다. 자신이 지은 잘못을 선한 행동으로 덮는 이는, 구름에서 벗어난 달처럼 이 세상을 비춘다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 과거의 나로 지금의 나를 판결하지 않아도 된다. 다시 시작한 순간부터 빛이다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/39766976/4k-clouds-and-moon-4k-moon-video-4k-nature-video-4k-video-nature-39766976.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/39766976/16958847_540_960_50fps.mp4"></video><div class="cap">늦었다고 생각한 사람도, 구름 걷힌 달처럼 빛난다.</div></div><div class="desc">구름이 걷히며 드러나는 보름달 타임랩스.</div><div class="credit">참고: <a href="https://www.pexels.com/video/stunning-4k-full-moon-timelapse-with-clouds-39766976/" target="_blank" rel="noopener">Stunning 4K Full Moon Timelapse with Clouds</a> · Dikunj  Vaghela / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/8756698/pexels-photo-8756698.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/8756698/8756698-sd_506_960_25fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">새벽 3시 셀프빨래방. 드럼세탁기의 둥근 창이 보름달처럼 돈다. 거품이 걷히고 창이 맑아지는 순간 자막.</div><div class="credit">참고: <a href="https://www.pexels.com/video/industrial-washing-machine-8756698/" target="_blank" rel="noopener">Industrial Washing Machine</a> · Tima Miroshnichenko / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/laundromat%20washing%20machine/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th8">
+  <div class="text"><span class="num">2-09</span><span class="tag">작은 성장</span>
+  <div class="quote">물방울이 모여 항아리를 채운다.</div>
+  <div class="src">법구경 122 · 악행품</div>
+  <p class="sutra">&quot;그 정도로 무슨 결과가 오겠나&quot; 하며 작은 선을 가볍게 여기지 말라. 물방울이 떨어져 물항아리가 채워지듯, 지혜로운 이는 조금씩 모아 선으로 가득 찬다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 티 안 나는 하루하루가 헛것이 아니라는 증거. 갓생을 못 살아도 오늘 한 방울은 떨어졌다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/26793261/above-water-after-rain-close-up-view-drop-26793261.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/26793261/12007636_540_960_30fps.mp4"></video><div class="cap">물방울이 모여 항아리를 채운다.</div></div><div class="desc">슬로모션으로 떨어지는 빗방울. 한 방울씩.</div><div class="credit">참고: <a href="https://www.pexels.com/video/falling-rain-water-in-slow-motion-26793261/" target="_blank" rel="noopener">Falling rain water in slow motion</a> · Ambareesh Sridhar Photography / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">배터리 1%인 폰을 충전기에 꽂는다. 2%, 3%… 숫자만 올라가는 화면에 빗소리를 깐다. 100%가 아니라 12%쯤에서 끝낸다.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/phone%20battery%20charging/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th8">
+  <div class="text"><span class="num">2-10</span><span class="tag">작은 성장</span>
+  <div class="quote">하나씩, 조금씩, 순간순간.</div>
+  <div class="src">법구경 239 · 더러움품</div>
+  <p class="sutra">은세공인이 은의 찌꺼기를 걸러내듯, 지혜로운 이는 자신의 허물을 하나씩, 조금씩, 순간순간 걷어낸다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 한 번에 달라지지 않아도 된다. 고치는 속도가 느려도 방향이 맞으면 된다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/39361700/artist-at-work-artistic-ironwork-casting-fire-39361700.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/39361700/16755171_540_960_24fps.mp4"></video><div class="cap">하나씩, 조금씩, 순간순간.</div></div><div class="desc">불꽃 아래서 은을 다듬는 장인의 손.</div><div class="credit">참고: <a href="https://www.pexels.com/video/jewelry-crafting-with-heat-and-precision-39361700/" target="_blank" rel="noopener">Jewelry Crafting with Heat and Precision</a> · Ravi Roshan / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">때 묻은 흰 운동화를 칫솔로 한 칸씩 닦는 세척 ASMR. 얼룩이 한 줄씩 지워지는 탑뷰.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/cleaning%20white%20sneakers/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th9">
+  <div class="text"><span class="num">2-11</span><span class="tag">자존감</span>
+  <div class="quote">쓰레기 더미 위에서도 연꽃은 핀다.</div>
+  <div class="src">법구경 58–59 · 꽃품</div>
+  <p class="sutra">큰길가에 버려진 쓰레기 더미 위에도 향기롭고 사랑스러운 연꽃이 피어나듯, 눈먼 이들 사이에서도 깨달은 이의 제자는 지혜로 환히 빛난다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 회사가, 집안이, 상황이 엉망이어도 내가 피어나는 걸 막을 수는 없다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/38347130/pexels-photo-38347130.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/38347130/16283725_540_960_30fps.mp4"></video><div class="cap">쓰레기 더미 위에서도 연꽃은 핀다.</div></div><div class="desc">초록 잎 사이로 천천히 열리는 연꽃.</div><div class="credit">참고: <a href="https://www.pexels.com/video/serene-lotus-blossom-in-lush-greenery-38347130/" target="_blank" rel="noopener">Serene Lotus Blossom in Lush Greenery</a> · 정규송 Nui MALAMA / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/37539584/pexels-photo-37539584.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/37539584/15906036_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">재개발 공사장 펜스 틈. 포크레인이 움직이는 배경 앞, 아스팔트 틈의 들꽃 하나. 소음은 크게, 꽃은 고요하게.</div><div class="credit">참고: <a href="https://www.pexels.com/video/solitary-flower-amidst-concrete-urban-jungle-37539584/" target="_blank" rel="noopener">Solitary Flower Amidst Concrete Urban Jungle</a> · 정규송 Nui MALAMA / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/flower%20concrete%20crack/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th10">
+  <div class="text"><span class="num">2-12</span><span class="tag">소소한 행복</span>
+  <div class="quote">만족이 가장 큰 재산이다.</div>
+  <div class="src">법구경 204 · 안락품</div>
+  <p class="sutra">건강은 가장 큰 이익이고, 만족은 가장 큰 재산이며, 믿을 수 있는 사람은 가장 좋은 친척이고, 열반은 가장 높은 행복이다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 계좌 잔고 말고 다른 기준으로 오늘을 세어 보게 하는 문장.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/29639948/running-29639948.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/29639948/12752368_540_960_60fps.mp4"></video><div class="cap">만족이 가장 큰 재산이다.</div></div><div class="desc">흐린 아침 공원을 혼자 달리는 사람.</div><div class="credit">참고: <a href="https://www.pexels.com/video/solo-runner-on-overcast-day-in-urban-park-29639948/" target="_blank" rel="noopener">Solo Runner on Overcast Day in Urban Park</a> · Ajmal  Mohib / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/8480284/pexels-photo-8480284.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/8480284/8480284-sd_540_960_25fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">주식앱의 빨간·파란 캔들 차트가 요동치는 화면 위로 문장이 천천히 타이핑된다. 차트는 계속 흔들리고 문장은 가만히 있다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/person-looking-a-stock-market-8480284/" target="_blank" rel="noopener">Person Looking a Stock Market</a> · ArtHouse Studio / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/stock%20market%20chart/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th10">
+  <div class="text"><span class="num">2-13</span><span class="tag">소소한 행복</span>
+  <div class="quote">가진 게 없어도, 우리는 행복하게 산다.</div>
+  <div class="src">법구경 200 · 안락품</div>
+  <p class="sutra">아무것도 가진 것 없는 우리는 참으로 행복하게 산다. 빛나는 신들처럼 기쁨을 양식 삼아 살아가리라.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 아직 집도 차도 없는 사람에게 &quot;그래도 행복할 수 있다&quot;는 오래된 증언.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/4553200/pexels-photo-4553200.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/4553200/4553200-sd_506_960_25fps.mp4"></video><div class="cap">가진 게 없어도, 우리는 행복하게 산다.</div></div><div class="desc">이삿짐 상자와 바닥에 떨어진 햇빛 한 조각.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-room-with-boxes-and-a-light-shining-on-the-floor-4553200/" target="_blank" rel="noopener">A room with boxes and a light shining on the floor</a> · cottonbro studio / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/5742999/alone-at-home-athlete-beige-5742999.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/5742999/5742999-sd_506_960_25fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">짐을 다 뺀 빈 원룸. 형광등 아래 혼자 막춤 추는 사람을 천장 CCTV 앵글로.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-woman-dancing-at-home-5742999/" target="_blank" rel="noopener">A Woman Dancing at Home</a> · cottonbro studio / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/dancing%20alone%20at%20home/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th7">
+  <div class="text"><span class="num">2-14</span><span class="tag">불안·후회</span>
+  <div class="quote">비야, 내리고 싶으면 마음껏 내려라.</div>
+  <div class="src">숫타니파타 1.2 · 다니야 경</div>
+  <p class="sutra">성냄 없고 고집도 사라져, 마히 강가에서 하룻밤을 머문다. 내 오두막은 지붕이 열려 있고 불은 꺼졌다. 그러니 하늘이여, 비를 뿌리려거든 마음껏 뿌려라.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 목동 다니야는 &quot;지붕도 덮었고 불도 지폈으니 비야 와라&quot;고 했다. 부처는 반대로 말한다. 지킬 게 없어서 두렵지 않다고.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7681517/architecture-blur-bridge-building-7681517.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7681517/7681517-sd_540_960_24fps.mp4"></video><div class="cap">비야, 내리고 싶으면 마음껏 내려라.</div></div><div class="desc">지붕 위로 떨어지는 빗방울. 빗소리만.</div><div class="credit">참고: <a href="https://www.pexels.com/video/raindrops-falling-on-the-roof-7681517/" target="_blank" rel="noopener">Raindrops Falling on the Roof</a> · Jill Burrow / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/34195597/pexels-photo-34195597.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/34195597/14493911_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">자동세차장 안 운전석 시점. 거품과 물줄기와 회전 브러시가 차창을 때리는데 차 안은 고요하다. 운전자는 눈을 감고 있다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/car-wash-spray-in-action-at-automatic-station-34195597/" target="_blank" rel="noopener">Car Wash Spray in Action at Automatic Station</a> · Teju / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/automatic%20car%20wash%20inside/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th11">
+  <div class="text"><span class="num">2-15</span><span class="tag">혼자·자립</span>
+  <div class="quote">무소의 뿔처럼 혼자서 가라.</div>
+  <div class="src">숫타니파타 1.3 · 무소의 뿔 경</div>
+  <p class="sutra">소리에 놀라지 않는 사자처럼, 그물에 걸리지 않는 바람처럼, 물에 젖지 않는 연꽃처럼, 무소의 뿔처럼 혼자서 가라.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 혼밥, 혼술, 비혼, 퇴사. 혼자 하는 선택이 외로움이 아니라 걸음일 수 있다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/34479391/asian-rhino-rhino-horn-34479391.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/34479391/14610687_540_960_30fps.mp4"></video><div class="cap">무소의 뿔처럼 혼자서 가라.</div></div><div class="desc">풀을 뜯는 코뿔소 한 마리. 무심하고 묵직하게.</div><div class="credit">참고: <a href="https://www.pexels.com/video/close-up-of-a-rhino-grazing-in-the-wild-34479391/" target="_blank" rel="noopener">Close-up of a Rhino Grazing in the Wild</a> · Peter Smit / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">코인노래방 1인 부스. 혼자 발라드를 온 힘 다해 부르는 사람을 자연 다큐처럼 진지하게 찍는다. 소리는 끄고 문장만 띄운다.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/karaoke%20booth%20singing%20alone/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th9">
+  <div class="text"><span class="num">2-16</span><span class="tag">자존감</span>
+  <div class="quote">하나뿐인 자식을 지키듯, 그 마음을 오늘은 나에게.</div>
+  <div class="src">숫타니파타 1.8 · 자애경</div>
+  <p class="sutra">어머니가 목숨을 걸고 하나뿐인 자식을 지키듯, 살아 있는 모든 존재를 향해 한없는 마음을 키워라.</p>
+  <p class="why"><b>왜 바로 닿나</b> · &quot;모든 존재&quot; 안에는 나도 들어 있다. 남에게 주던 다정함을 나에게 먼저.</p>
+  <p class="note">※ 카드 문장 뒷부분(&quot;오늘은 나에게&quot;)은 해석을 더한 카피예요.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6392156/pexels-photo-6392156.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6392156/6392156-sd_540_960_24fps.mp4"></video><div class="cap">하나뿐인 자식을 지키듯, 그 마음을 오늘은 나에게.</div></div><div class="desc">아기의 작은 손을 감싸 쥔 엄마의 손.</div><div class="credit">참고: <a href="https://www.pexels.com/video/mother-holding-baby-s-hand-6392156/" target="_blank" rel="noopener">Mother Holding Baby's Hand</a> · William  Fortunato / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/36254640/pexels-photo-36254640.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/36254640/15375346_540_960_60fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">편의점 야간 알바생이 뒷문에서 길고양이에게 몰래 간식을 준다. 흑백 CCTV 화질, 구석에 타임스탬프 03:12.</div><div class="credit">참고: <a href="https://www.pexels.com/video/stray-cat-eating-from-orange-dish-outdoors-36254640/" target="_blank" rel="noopener">Stray Cat Eating from Orange Dish Outdoors</a> · Şahin Doğdu / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/feeding%20stray%20cat%20night/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th12">
+  <div class="text"><span class="num">2-17</span><span class="tag">상실·이별</span>
+  <div class="quote">슬픔은 바람에 날리는 솜털처럼 보내도 된다.</div>
+  <div class="src">숫타니파타 3.8 · 화살 경(살라 숫따)</div>
+  <p class="sutra">불난 집을 물로 끄듯, 지혜로운 이는 일어난 슬픔을 바람이 솜털을 날려 보내듯 재빨리 흩어 보낸다. 행복을 구하는 이는 자기 안의 화살, 곧 탄식과 그리움과 슬픔을 뽑아내야 한다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 슬픔을 억지로 없애라는 말이 아니다. 계속 쥐고 있지 않아도 된다는 말이다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/12243869/beautiful-flowers-beautiful-nature-beauty-in-nature-dandelion-12243869.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/12243869/12243869-sd_540_960_30fps.mp4"></video><div class="cap">슬픔은 바람에 날리는 솜털처럼 보내도 된다.</div></div><div class="desc">바람에 흩어지는 민들레 홀씨.</div><div class="credit">참고: <a href="https://www.pexels.com/video/dandelion-flying-on-wind-12243869/" target="_blank" rel="noopener">Dandelion Flying on Wind</a> · Marsel Sharipov / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">미용실 바닥에서 방금 잘린 긴 머리카락을 빗자루로 쓸어 담는 탑뷰. 이별 후 머리 자르는 장면의 &quot;다음 컷&quot;.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/hair%20salon%20floor%20hair/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th13">
+  <div class="text"><span class="num">2-18</span><span class="tag">관계·분노</span>
+  <div class="quote">원한은 원한으로 풀리지 않는다.</div>
+  <div class="src">법구경 5 · 쌍품</div>
+  <p class="sutra">이 세상에서 원한은 원한으로 결코 가라앉지 않는다. 원한을 품지 않을 때에만 가라앉는다. 이것은 영원한 법칙이다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 되갚아야 끝날 것 같은 마음. 사실은 내려놓는 쪽이 먼저 자유로워진다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6753504/candle-candle-light-candle-wax-handmade-6753504.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6753504/6753504-sd_540_960_25fps.mp4"></video><div class="cap">원한은 원한으로 풀리지 않는다.</div></div><div class="desc">촛불을 불어 끈다. 연기가 천천히 흩어진다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/a-person-blowing-out-a-candle-6753504/" target="_blank" rel="noopener">A Person Blowing Out a Candle</a> · Vlada Karpovich / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><div class="ph"><div class="big">직접 촬영</div><div class="t">딱 맞는 스톡이 없어요.<br>직접 찍을 때 더 독특해지는 장면입니다.</div></div></div><div class="desc">가방에서 꺼낸 엉킨 이어폰 줄. 세게 당길수록 더 엉키고, 손을 느슨하게 하자 스르르 풀린다. 손 클로즈업 원테이크.</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/untangling%20earphones/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th11">
+  <div class="text"><span class="num">2-19</span><span class="tag">혼자·자립</span>
+  <div class="quote">나야말로 나의 의지처.</div>
+  <div class="src">법구경 160 · 자기품</div>
+  <p class="sutra">자기야말로 자기의 의지처이니, 다른 누가 의지처가 되겠는가. 자신을 잘 다스린 이는 얻기 어려운 의지처를 얻는다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 누군가 구해 주길 기다리다 지친 날, 내 편이 여기 하나는 있다는 확인.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/32962928/pexels-photo-32962928.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/32962928/14048618_540_960_25fps.mp4"></video><div class="cap">나야말로 나의 의지처.</div></div><div class="desc">폭풍 치는 바다 한가운데 서 있는 등대.</div><div class="credit">참고: <a href="https://www.pexels.com/video/monochrome-lighthouse-on-a-stormy-sea-32962928/" target="_blank" rel="noopener">Monochrome Lighthouse on a Stormy Sea</a> · Efrem  Efre / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/36320055/pexels-photo-36320055.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/36320055/15402680_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">출근 전 엘리베이터 거울 앞. 문이 닫힌 10초 동안 두 팔로 자기 어깨를 감싸 안는다(나비 포옹). 문이 열리면 아무 일 없다는 듯 나간다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/modern-elevator-door-with-reflective-surface-36320055/" target="_blank" rel="noopener">Modern Elevator Door with Reflective Surface</a> · Kirill  Moiseev / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/elevator%20mirror%20reflection/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th5">
+  <div class="text"><span class="num">2-20</span><span class="tag">비교·경쟁</span>
+  <div class="quote">남이 한 것 말고, 내가 한 것만 보라.</div>
+  <div class="src">법구경 50 · 꽃품</div>
+  <p class="sutra">남의 허물을 찾지 말고, 남이 한 일과 하지 않은 일을 살피지 말라. 오직 자신이 한 일과 하지 않은 일을 보라.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 남의 피드 대신 내 하루. 비교를 끄는 가장 오래된 방법.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6381013/pexels-photo-6381013.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6381013/6381013-sd_540_960_24fps.mp4"></video><div class="cap">남이 한 것 말고, 내가 한 것만 보라.</div></div><div class="desc">창가에 서서 바깥을 보는 뒷모습. 휴대폰은 내려놓았다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/back-view-of-a-woman-standing-at-window-6381013/" target="_blank" rel="noopener">Back View of a Woman Standing at Window</a> · Liza Summer / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/27409126/animal-portrait-blue-mask-chestnut-horse-equestrian-27409126.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/27409126/12137571_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">경주마 눈가리개 클로즈업. 옆 레인의 말들은 흐릿하고 앞만 선명하다. 숨소리와 발굽 소리.</div><div class="credit">참고: <a href="https://www.pexels.com/video/power-and-speed-a-champion-racehorse-in-full-stride-27409126/" target="_blank" rel="noopener">Power and Speed: A Champion Racehorse in Full Stride</a> · The KRM / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/racehorse%20blinkers/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th7">
+  <div class="text"><span class="num">2-21</span><span class="tag">불안·후회</span>
+  <div class="quote">세상을 물거품처럼 보라.</div>
+  <div class="src">법구경 170 · 세상품</div>
+  <p class="sutra">세상을 물거품처럼, 신기루처럼 바라보는 이를 죽음의 왕은 찾아내지 못한다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 지금 나를 짓누르는 걱정도 언젠가 꺼질 거품이다. 가볍게 볼 권리가 있다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7640381/abstract-air-bubbles-art-artistic-7640381.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7640381/7640381-sd_540_960_30fps.mp4"></video><div class="cap">세상을 물거품처럼 보라.</div></div><div class="desc">클로즈업으로 터지는 거품들.</div><div class="credit">참고: <a href="https://www.pexels.com/video/close-up-footage-of-bubbles-bursting-7640381/" target="_blank" rel="noopener">Close-up Footage of Bubbles Bursting</a> · Eva Bronzini / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/34601858/pexels-photo-34601858.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/34601858/14664327_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">막 만든 라떼아트 하트가 서서히 퍼지며 무너지는 15초 타임랩스. 완벽한 모양이 흐려질수록 커피는 마시기 좋아진다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/barista-creating-latte-art-in-coffee-shop-34601858/" target="_blank" rel="noopener">Barista Creating Latte Art in Coffee Shop</a> · Esra Afşar / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/latte%20art/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+<article class="card th13">
+  <div class="text"><span class="num">2-22</span><span class="tag">관계·분노</span>
+  <div class="quote">천 마디보다, 평온해지는 한 마디.</div>
+  <div class="src">법구경 100 · 천품</div>
+  <p class="sutra">쓸모없는 말 천 마디보다, 듣고 마음이 평온해지는 한 마디 말이 낫다.</p>
+  <p class="why"><b>왜 바로 닿나</b> · 이 시리즈가 하려는 일 그 자체. 마지막 편이나 채널 소개 영상에 쓰기 좋다.</p>
+  </div>
+  <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/29592159/pexels-photo-29592159.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/29592159/12737462_540_960_60fps.mp4"></video><div class="cap">천 마디보다, 평온해지는 한 마디.</div></div><div class="desc">조용한 도서관 서가 사이의 빛.</div><div class="credit">참고: <a href="https://www.pexels.com/video/quiet-library-study-ambiance-with-bookshelves-29592159/" target="_blank" rel="noopener">Quiet Library Study Ambiance with Bookshelves</a> · Julio Lopez / Pexels</div></div>
+  <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7822022/pexels-photo-7822022.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7822022/7822022-sd_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">잠금화면에 쌓인 알림 99+개를 &quot;모두 지우기&quot;로 한 번에 날린다. 정적. 빈 화면 위에 문장 한 줄.</div><div class="credit">참고: <a href="https://www.pexels.com/video/notification-on-a-phone-7822022/" target="_blank" rel="noopener">Notification On a Phone</a> · RDNE Stock project / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/phone%20notifications/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
+</article>
+</main>
+<footer>
+  <h3>번역과 출처</h3>
+  <ul>
+    <li>한국어 문장은 공개 번역(SuttaCentral의 Bhikkhu Sujato·Brahmali 번역과 빨리어 원문, accesstoinsight.org의 Buddharakkhita·Thanissaro·John D. Ireland·Amaravati 번역)을 대조해 새로 옮긴 것입니다. 기존 한국어 번역서 문장은 쓰지 않았어요.</li>
+    <li>"카드 문장"은 영상 자막용으로 다듬은 문장이고, 그 아래 인용문이 경전에 더 가까운 번역입니다. 해석을 보탠 카드에는 따로 표시했어요.</li>
+    <li>참고 영상은 Pexels 무료 영상이에요. Pexels 라이선스로 상업적 이용과 편집이 가능하지만, 실제로 쓰기 전에 각 원본 페이지에서 조건을 한 번 더 확인하고 고화질 원본을 받으세요.</li>
+  </ul>
+</footer>
+<script>
+try{document.querySelectorAll('video').forEach(v=>v.removeAttribute('controls'));
+const io=new IntersectionObserver(es=>es.forEach(en=>{const v=en.target;if(en.isIntersecting){v.play().catch(()=>v.setAttribute('controls',''));}else v.pause();}),{threshold:.35});
+document.querySelectorAll('video').forEach(v=>io.observe(v));}catch(err){}
+</script>
+</body>
+</html>
