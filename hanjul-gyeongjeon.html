@@ -38,7 +38,7 @@ main{max-width:1280px;margin:0 auto;padding:28px 28px 80px;display:flex;flex-dir
 .frame{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--line)}
 .frame video{width:100%;height:100%;object-fit:cover;display:block}
 .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 16px 22px;background:linear-gradient(transparent,rgba(0,0,0,.75));font-weight:700;font-size:17px;line-height:1.45;text-align:center;word-break:keep-all;text-shadow:0 1px 8px rgba(0,0,0,.6);transition:opacity .3s}
-.fr{position:absolute;opacity:0;pointer-events:none}
+.fr{position:fixed;top:0;left:0;opacity:0;pointer-events:none}
 .toggle .box{width:14px;height:14px;border:1px solid var(--sub);border-radius:3px;display:inline-block}
 .chip{user-select:none}
 .badge{position:absolute;top:10px;left:10px;font-size:11px;background:rgba(0,0,0,.55);padding:3px 8px;border-radius:99px;color:#fff}
@@ -101,11 +101,12 @@ footer li{margin-left:18px}
 .fold small{font-weight:400;font-size:13px;color:var(--dim);margin-left:10px}
 .fold .a{font-size:13px;color:var(--accent);white-space:nowrap}
 .fold .close{display:none}
-.rest{display:none;flex-direction:column;gap:28px}
-#more:checked ~ main .rest{display:flex}
-#more:checked ~ main .fold .open{display:none}
-#more:checked ~ main .fold .close{display:inline}
-#more:focus-visible ~ main .fold{outline:2px solid var(--accent)}
+.more > summary{list-style:none}
+.more > summary::-webkit-details-marker{display:none}
+.rest{display:flex;flex-direction:column;gap:28px;margin-top:28px}
+.more[open] .fold .open{display:none}
+.more[open] .fold .close{display:inline}
+.fold:focus-visible{outline:2px solid var(--accent)}
 .rest .num::after{content:" · 접어 둠"}
 @media (max-width:560px){.fold{flex-direction:column;align-items:flex-start}.fold small{display:block;margin:4px 0 0}}
 </style>
@@ -120,7 +121,7 @@ footer li{margin-left:18px}
     <span><i class="dot" style="background:var(--odd)"></i>이질적 화면: 직접 제작할 콘셉트 (레퍼런스가 있으면 함께)</span>
   </div>
 </header>
-<input type="radio" name="f" id="f0" class="fr ff" checked><input type="radio" name="f" id="f1" class="fr ff"><input type="radio" name="f" id="f2" class="fr ff"><input type="radio" name="f" id="f3" class="fr ff"><input type="radio" name="f" id="f4" class="fr ff"><input type="radio" name="f" id="f5" class="fr ff"><input type="radio" name="f" id="f6" class="fr ff"><input type="radio" name="f" id="f7" class="fr ff"><input type="radio" name="f" id="f8" class="fr ff"><input type="radio" name="f" id="f9" class="fr ff"><input type="radio" name="f" id="f10" class="fr ff"><input type="radio" name="f" id="f11" class="fr ff"><input type="radio" name="f" id="f12" class="fr ff"><input type="radio" name="f" id="f13" class="fr ff"><input type="checkbox" id="capT" class="fr" checked><input type="checkbox" id="more" class="fr">
+<input type="radio" name="f" id="f0" class="fr ff" checked><input type="radio" name="f" id="f1" class="fr ff"><input type="radio" name="f" id="f2" class="fr ff"><input type="radio" name="f" id="f3" class="fr ff"><input type="radio" name="f" id="f4" class="fr ff"><input type="radio" name="f" id="f5" class="fr ff"><input type="radio" name="f" id="f6" class="fr ff"><input type="radio" name="f" id="f7" class="fr ff"><input type="radio" name="f" id="f8" class="fr ff"><input type="radio" name="f" id="f9" class="fr ff"><input type="radio" name="f" id="f10" class="fr ff"><input type="radio" name="f" id="f11" class="fr ff"><input type="radio" name="f" id="f12" class="fr ff"><input type="radio" name="f" id="f13" class="fr ff"><input type="checkbox" id="capT" class="fr" checked>
 <div class="filters"><div class="in"><label class="chip c0" for="f0">전체</label><label class="chip c1" for="f1">힘들었지?</label><label class="chip c2" for="f2">잘하고 있어</label><label class="chip c3" for="f3">잘될 거야</label><span class="sep"></span><label class="chip c4" for="f4">평가·악플</label><label class="chip c5" for="f5">비교·경쟁</label><label class="chip c6" for="f6">자책·번아웃</label><label class="chip c7" for="f7">불안·후회</label><label class="chip c8" for="f8">작은 성장</label><label class="chip c9" for="f9">자존감</label><label class="chip c10" for="f10">소소한 행복</label><label class="chip c11" for="f11">혼자·자립</label><label class="chip c12" for="f12">상실·이별</label><label class="chip c13" for="f13">관계·분노</label><label class="toggle" for="capT"><span class="box"></span>자막 미리보기</label></div></div>
 <main>
 <div class="sec"><div class="k">PART 1 · 7문장</div><h2>말 걸어주는 경전</h2><p>힘들었지? · 잘하고 있어 · 잘될 거야</p></div>
@@ -332,7 +333,7 @@ footer li{margin-left:18px}
   <div class="panel"><div class="plabel m">● 어울리는 화면</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/8345809/pexels-photo-8345809.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/8345809/8345809-sd_506_960_25fps.mp4"></video><div class="cap">좋은 친구는 절반이 아니라 전부다.</div></div><div class="desc">나란히 걸어가는 두 친구의 뒷모습.</div><div class="credit">참고: <a href="https://www.pexels.com/video/back-view-of-women-walking-in-the-pavement-beside-the-buildings-8345809/" target="_blank" rel="noopener">Back View of Women Walking in the Pavement Beside the Buildings</a> · Ron Lach / Pexels</div></div>
   <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/6297719/pexels-photo-6297719.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/6297719/6297719-sd_540_960_24fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">비 오는 날 우산 하나. 걷는 내내 한 사람의 바깥쪽 어깨만 젖어 있다. 카메라는 그 어깨만 본다.</div><div class="credit">참고: <a href="https://www.pexels.com/video/couple-under-a-umbrella-6297719/" target="_blank" rel="noopener">Couple Under a Umbrella</a> · Klaus Nielsen / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/sharing%20umbrella%20rain/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
 </article>
-<label class="fold" for="more"><span class="t">그 외 26문장<small>이번에 고르지 않은 문장이에요. 지우지 않고 접어 두었어요.</small></span><span class="a open">펼치기 ▾</span><span class="a close">접기 ▴</span></label>
+<details class="more"><summary class="fold"><span class="t">그 외 26문장<small>이번에 고르지 않은 문장이에요. 지우지 않고 접어 두었어요.</small></span><span class="a open">펼치기 ▾</span><span class="a close">접기 ▴</span></summary>
 <div class="rest">
 <article class="card th1 warm">
   <div class="text"><span class="num">1-01</span><span class="tag">힘들었지?</span>
@@ -598,6 +599,7 @@ footer li{margin-left:18px}
   <div class="panel odd"><div class="plabel o">● 이질적 화면 · 제작 제안</div><div class="frame"><video muted loop playsinline controls preload="none" poster="https://images.pexels.com/videos/7822022/pexels-photo-7822022.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=750" src="https://videos.pexels.com/video-files/7822022/7822022-sd_540_960_30fps.mp4"></video><span class="badge">레퍼런스</span></div><div class="desc">잠금화면에 쌓인 알림 99+개를 &quot;모두 지우기&quot;로 한 번에 날린다. 정적. 빈 화면 위에 문장 한 줄.</div><div class="credit">참고: <a href="https://www.pexels.com/video/notification-on-a-phone-7822022/" target="_blank" rel="noopener">Notification On a Phone</a> · RDNE Stock project / Pexels</div><a class="search" target="_blank" rel="noopener" href="https://www.pexels.com/search/videos/phone%20notifications/?orientation=portrait">비슷한 소스 더 찾기 →</a></div>
 </article>
 </div>
+</details>
 </main>
 <footer>
   <h3>번역과 출처</h3>
